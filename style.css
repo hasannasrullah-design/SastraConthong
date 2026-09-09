@@ -1,0 +1,1288 @@
+/* =========================================
+   SASTRO CONTHONG
+   MAIN STYLESHEET
+   ========================================= */
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0d0d0d;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+audio {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   COLOR VARIABLES
+   ========================================= */
+
+:root {
+    --red: #990000;
+    --dark-red: #8b0000;
+    --bright-red: #c40000;
+
+    --black: #0d0d0d;
+    --black-2: #121212;
+    --black-3: #181818;
+
+    --white: #ffffff;
+    --gray: #a7a7a7;
+    --border: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 78px;
+
+    z-index: 1000;
+
+    background: rgba(13, 13, 13, 0.88);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    width: min(1200px, 92%);
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-weight: 800;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--red);
+
+    border: 2px solid #ffffff;
+
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+.brand-text {
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 15px;
+    line-height: 0.9;
+
+    letter-spacing: 1px;
+}
+
+
+/* NAV MENU */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #cccccc;
+
+    transition: 0.3s ease;
+}
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--red);
+
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+
+/* SOCIAL */
+
+.nav-social {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.nav-social a {
+    padding: 8px 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+
+    transition: 0.3s ease;
+}
+
+.nav-social a:hover {
+    background: var(--red);
+
+    border-color: var(--red);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(153, 0, 0, 0.28),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #050505 0%,
+            #0d0d0d 55%,
+            #180000 100%
+        );
+}
+
+
+/* GRID EFFECT */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+/* RED GLOW */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -200px;
+    bottom: -200px;
+
+    background: var(--red);
+
+    opacity: 0.12;
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding-top: 80px;
+}
+
+
+/* HERO LOGO */
+
+.hero-logo {
+    width: 95px;
+    height: 95px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--red);
+
+    border: 3px solid #ffffff;
+
+    box-shadow:
+        8px 8px 0 rgba(255,255,255,0.08);
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 42px;
+    font-weight: 900;
+
+    letter-spacing: -4px;
+}
+
+
+/* SMALL TEXT */
+
+.hero-small {
+    margin-bottom: 10px;
+
+    color: #bbbbbb;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+
+/* HERO TITLE */
+
+.hero h1 {
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: clamp(80px, 13vw, 190px);
+
+    line-height: 0.78;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: var(--red);
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 600px;
+
+    margin-top: 30px;
+
+    color: #bbbbbb;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--red);
+
+    border: 1px solid var(--red);
+}
+
+.btn-primary:hover {
+    background: var(--bright-red);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(153, 0, 0, 0.35);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+
+    color: #0d0d0d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   CHANT SECTION
+   ========================================= */
+
+.chants-section {
+    position: relative;
+
+    padding: 120px 0;
+
+    background: #0d0d0d;
+}
+
+.chants-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--red),
+            transparent
+        );
+}
+
+
+/* SECTION HEADER */
+
+.section-header {
+    width: min(1200px, 92%);
+
+    margin: 0 auto 60px;
+}
+
+.section-label {
+    margin-bottom: 12px;
+
+    color: var(--red);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.section-header h2 {
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.82;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    text-transform: uppercase;
+}
+
+.section-header h2 span {
+    color: var(--red);
+}
+
+.section-description {
+    max-width: 600px;
+
+    margin-top: 25px;
+
+    color: var(--gray);
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   CHANT GRID
+   ========================================= */
+
+.chant-grid {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   CHANT CARD
+   ========================================= */
+
+.chant-card {
+    position: relative;
+
+    min-height: 390px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171717,
+            #0e0e0e
+        );
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.chant-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--red);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: 0.35s ease;
+}
+
+.chant-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(153, 0, 0, 0.65);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.chant-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* NUMBER */
+
+.chant-number {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    color: rgba(255,255,255,0.06);
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 80px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* CARD CONTENT */
+
+.chant-card-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 30px;
+}
+
+
+/* CARD TOP */
+
+.chant-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+/* TAG */
+
+.chant-tag {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    border: 1px solid;
+}
+
+.chant-tag.main {
+    color: #ffffff;
+
+    background: var(--red);
+
+    border-color: var(--red);
+}
+
+.chant-tag.spirit {
+    color: #ffffff;
+
+    border-color: rgba(255,255,255,0.2);
+}
+
+
+/* SMALL SC */
+
+.chant-duration {
+    color: #777777;
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* CARD TITLE */
+
+.chant-card h3 {
+    margin-bottom: 4px;
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 40px;
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+.chant-subtitle {
+    margin-bottom: 25px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   AUDIO PLAYER
+   ========================================= */
+
+.chant-card audio {
+    display: block;
+
+    width: 100%;
+    height: 42px;
+
+    margin-top: 10px;
+
+    border-radius: 0;
+
+    filter: grayscale(1) contrast(1.2);
+}
+
+
+/* =========================================
+   LYRICS BUTTON
+   ========================================= */
+
+.lyrics-button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 13px 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+
+    border: none;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.lyrics-button:hover {
+    color: #ff3333;
+}
+
+.lyrics-button .arrow {
+    font-size: 20px;
+
+    font-weight: 300;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   LYRICS
+   ========================================= */
+
+.lyrics {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    color: #aaaaaa;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    transition:
+        max-height 0.45s ease,
+        opacity 0.3s ease,
+        padding 0.45s ease;
+}
+
+.lyrics.show {
+    max-height: 500px;
+
+    padding-top: 15px;
+
+    opacity: 1;
+}
+
+.lyrics p {
+    border-left: 2px solid var(--red);
+
+    padding-left: 15px;
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about-section {
+    position: relative;
+
+    padding: 130px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #080808,
+            #160000
+        );
+
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: "SC";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -90px;
+
+    color: rgba(255,255,255,0.025);
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 350px;
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+.about-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(850px, 92%);
+
+    margin: auto;
+}
+
+.about-label {
+    margin-bottom: 15px;
+
+    color: var(--red);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.about-section h2 {
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: clamp(60px, 9vw, 115px);
+
+    line-height: 0.8;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+}
+
+.about-section h2 span {
+    color: var(--red);
+}
+
+.about-section p {
+    max-width: 700px;
+
+    margin-top: 30px;
+
+    color: #aaaaaa;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+.about-quote {
+    margin-top: 45px;
+
+    padding-left: 20px;
+
+    border-left: 4px solid var(--red);
+
+    color: #ffffff;
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    background: #050505;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding: 45px 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--red);
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    border: 2px solid #ffffff;
+}
+
+.footer-brand h3 {
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+}
+
+.footer-brand p {
+    margin-top: 5px;
+
+    color: #666666;
+
+    font-size: 11px;
+}
+
+
+/* FOOTER SOCIAL */
+
+.footer-social {
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-social a {
+    color: #999999;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ffffff;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+
+    color: #555555;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bright-red);
+}
+
+
+/* =========================================
+   SELECTION
+   ========================================= */
+
+::selection {
+    background: var(--red);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .nav-social {
+        display: none;
+    }
+
+    .chant-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: clamp(
+            75px,
+            15vw,
+            140px
+        );
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    /* NAV */
+
+    .navbar {
+        height: 65px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .brand-logo {
+        width: 37px;
+        height: 37px;
+
+        font-size: 15px;
+    }
+
+    .brand-text {
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 850px;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+    }
+
+    .hero-logo {
+        width: 75px;
+        height: 75px;
+
+        font-size: 32px;
+    }
+
+    .hero-small {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 82px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+
+        margin-top: 25px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+
+    /* CHANT */
+
+    .chants-section {
+        padding: 80px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 65px;
+    }
+
+    .chant-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .chant-card {
+        min-height: auto;
+    }
+
+    .chant-card-content {
+        padding: 25px;
+    }
+
+    .chant-card h3 {
+        font-size: 36px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        padding: 90px 0;
+    }
+
+    .about-section h2 {
+        font-size: 70px;
+    }
+
+    .about-quote {
+        font-size: 24px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-social {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 68px;
+    }
+
+    .section-header h2 {
+        font-size: 55px;
+    }
+
+    .about-section h2 {
+        font-size: 60px;
+    }
+
+}
