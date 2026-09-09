@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0D0D0D">
+    <meta name="description" content="Sastro Conthong — Kontingen FIB Porsenigama">
+
+    <title>SASTRO CONTHONG — FIB Porsenigama</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#" class="brand">
+                <span class="brand-logo">SC</span>
+
+                <span class="brand-text">
+                    SASTRO<br>
+                    CONTHONG
+                </span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#chants">Chant</a>
+                <a href="#about">Tentang</a>
+            </nav>
+
+            <div class="nav-social">
+                <a href="https://youtube.com/" target="_blank">
+                    YouTube
+                </a>
+
+                <a href="https://x.com/" target="_blank">
+                    X
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-logo">
+                    SC
+                </div>
+
+                <p class="hero-small">
+                    KONTINGEN FIB PORSENIGAMA
+                </p>
+
+                <h1>
+                    SASTRO<br>
+                    <span>CONTHONG</span>
+                </h1>
+
+                <p class="hero-description">
+                    Satu suara. Satu tribun. Satu semangat.
+                    <br>
+                    Dari FIB untuk kemenangan.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#chants" class="btn btn-primary">
+                        DENGARKAN CHANT
+                    </a>
+
+                    <a href="#about" class="btn btn-secondary">
+                        TENTANG KAMI
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CHANT COLLECTION
+        ========================== -->
+        <section class="chants-section" id="chants">
+
+            <div class="section-header">
+
+                <p class="section-label">
+                    SASTRO CONTHONG
+                </p>
+
+                <h2>
+                    KUMPULAN CHANT<br>
+                    <span>& LIRIK</span>
+                </h2>
+
+                <p class="section-description">
+                    Kumpulan chant yang menjadi suara dan energi
+                    Sastro Conthong di tribun Porsenigama.
+                </p>
+
+            </div>
+
+
+            <!-- CHANT GRID -->
+            <div class="chant-grid">
+
+
+                <!-- =========================
+                     CHANT 1
+                ========================== -->
+                <article class="chant-card">
+
+                    <div class="chant-number">
+                        01
+                    </div>
+
+                    <div class="chant-card-content">
+
+                        <div class="chant-top">
+
+                            <span class="chant-tag main">
+                                CHANT UTAMA
+                            </span>
+
+                            <span class="chant-duration">
+                                SC
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Sastro Conthong
+                        </h3>
+
+                        <p class="chant-subtitle">
+                            Chant utama Sastro Conthong
+                        </p>
+
+                        <audio controls preload="metadata">
+                            <source
+                                src="audio/sastro-conthong.mp3"
+                                type="audio/mpeg"
+                            >
+
+                            Browser kamu tidak mendukung audio.
+                        </audio>
+
+
+                        <button
+                            class="lyrics-button"
+                            onclick="toggleLyrics(this)"
+                        >
+                            <span>Buka Lirik</span>
+                            <span class="arrow">+</span>
+                        </button>
+
+
+                        <div class="lyrics">
+
+                            <p>
+                                Sastro Conthong!
+                                <br>
+                                Sastro Conthong!
+                                <br><br>
+
+                                FIB satu suara!
+                                <br>
+                                FIB satu jiwa!
+                                <br>
+                                Kita datang untuk menang!
+                                <br>
+                                Sastro Conthong takkan hilang!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     CHANT 2
+                ========================== -->
+                <article class="chant-card">
+
+                    <div class="chant-number">
+                        02
+                    </div>
+
+                    <div class="chant-card-content">
+
+                        <div class="chant-top">
+
+                            <span class="chant-tag spirit">
+                                SEMANGAT
+                            </span>
+
+                            <span class="chant-duration">
+                                SC
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            FIB Menggila
+                        </h3>
+
+                        <p class="chant-subtitle">
+                            Chant pembakar semangat
+                        </p>
+
+                        <audio controls preload="metadata">
+                            <source
+                                src="audio/fib-menggila.mp3"
+                                type="audio/mpeg"
+                            >
+
+                            Browser kamu tidak mendukung audio.
+                        </audio>
+
+
+                        <button
+                            class="lyrics-button"
+                            onclick="toggleLyrics(this)"
+                        >
+                            <span>Buka Lirik</span>
+                            <span class="arrow">+</span>
+                        </button>
+
+
+                        <div class="lyrics">
+
+                            <p>
+                                FIB! FIB!
+                                <br>
+                                Mari menggila!
+                                <br><br>
+
+                                Merah di dada!
+                                <br>
+                                Suara membara!
+                                <br>
+                                Lawan siapa?
+                                <br>
+                                Kita tak takut!
+                                <br><br>
+
+                                FIB MENGGILA!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     CHANT 3
+                ========================== -->
+                <article class="chant-card">
+
+                    <div class="chant-number">
+                        03
+                    </div>
+
+                    <div class="chant-card-content">
+
+                        <div class="chant-top">
+
+                            <span class="chant-tag spirit">
+                                TRIBUN
+                            </span>
+
+                            <span class="chant-duration">
+                                SC
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Merah FIB
+                        </h3>
+
+                        <p class="chant-subtitle">
+                            Chant untuk tribun
+                        </p>
+
+                        <audio controls preload="metadata">
+                            <source
+                                src="audio/merah-fib.mp3"
+                                type="audio/mpeg"
+                            >
+
+                            Browser kamu tidak mendukung audio.
+                        </audio>
+
+
+                        <button
+                            class="lyrics-button"
+                            onclick="toggleLyrics(this)"
+                        >
+                            <span>Buka Lirik</span>
+                            <span class="arrow">+</span>
+                        </button>
+
+
+                        <div class="lyrics">
+
+                            <p>
+                                Merah!
+                                <br>
+                                Merah!
+                                <br>
+                                Merah FIB!
+                                <br><br>
+
+                                Dari kampus sampai tribun
+                                <br>
+                                Kami selalu berdiri
+                                <br>
+                                Untuk FIB!
+                                <br>
+                                Untuk FIB!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     CHANT 4
+                ========================== -->
+                <article class="chant-card">
+
+                    <div class="chant-number">
+                        04
+                    </div>
+
+                    <div class="chant-card-content">
+
+                        <div class="chant-top">
+
+                            <span class="chant-tag spirit">
+                                SEMANGAT
+                            </span>
+
+                            <span class="chant-duration">
+                                SC
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Pantang Mundur
+                        </h3>
+
+                        <p class="chant-subtitle">
+                            Chant perjuangan
+                        </p>
+
+                        <audio controls preload="metadata">
+                            <source
+                                src="audio/pantang-mundur.mp3"
+                                type="audio/mpeg"
+                            >
+
+                            Browser kamu tidak mendukung audio.
+                        </audio>
+
+
+                        <button
+                            class="lyrics-button"
+                            onclick="toggleLyrics(this)"
+                        >
+                            <span>Buka Lirik</span>
+                            <span class="arrow">+</span>
+                        </button>
+
+
+                        <div class="lyrics">
+
+                            <p>
+                                Tak pernah mundur!
+                                <br>
+                                Tak pernah takut!
+                                <br><br>
+
+                                Sampai akhir perjuangan
+                                <br>
+                                Kami tetap bertahan
+                                <br>
+                                Satu langkah!
+                                <br>
+                                Satu tujuan!
+                                <br><br>
+
+                                MENANG!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     CHANT 5
+                ========================== -->
+                <article class="chant-card">
+
+                    <div class="chant-number">
+                        05
+                    </div>
+
+                    <div class="chant-card-content">
+
+                        <div class="chant-top">
+
+                            <span class="chant-tag main">
+                                CHANT UTAMA
+                            </span>
+
+                            <span class="chant-duration">
+                                SC
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Satu Suara
+                        </h3>
+
+                        <p class="chant-subtitle">
+                            Chant solidaritas
+                        </p>
+
+                        <audio controls preload="metadata">
+                            <source
+                                src="audio/satu-suara.mp3"
+                                type="audio/mpeg"
+                            >
+
+                            Browser kamu tidak mendukung audio.
+                        </audio>
+
+
+                        <button
+                            class="lyrics-button"
+                            onclick="toggleLyrics(this)"
+                        >
+                            <span>Buka Lirik</span>
+                            <span class="arrow">+</span>
+                        </button>
+
+
+                        <div class="lyrics">
+
+                            <p>
+                                Satu suara!
+                                <br>
+                                Satu langkah!
+                                <br>
+                                Satu tujuan!
+                                <br><br>
+
+                                Kita bersama
+                                <br>
+                                Menjaga nama FIB
+                                <br>
+                                Di setiap pertandingan
+                                <br>
+                                Di setiap perjuangan!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     CHANT 6
+                ========================== -->
+                <article class="chant-card">
+
+                    <div class="chant-number">
+                        06
+                    </div>
+
+                    <div class="chant-card-content">
+
+                        <div class="chant-top">
+
+                            <span class="chant-tag spirit">
+                                TRIBUN
+                            </span>
+
+                            <span class="chant-duration">
+                                SC
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Gas Terus FIB
+                        </h3>
+
+                        <p class="chant-subtitle">
+                            Chant penyemangat pertandingan
+                        </p>
+
+                        <audio controls preload="metadata">
+                            <source
+                                src="audio/gas-terus-fib.mp3"
+                                type="audio/mpeg"
+                            >
+
+                            Browser kamu tidak mendukung audio.
+                        </audio>
+
+
+                        <button
+                            class="lyrics-button"
+                            onclick="toggleLyrics(this)"
+                        >
+                            <span>Buka Lirik</span>
+                            <span class="arrow">+</span>
+                        </button>
+
+
+                        <div class="lyrics">
+
+                            <p>
+                                BHSDFBVGH
+                                <br>
+                                Gas terus FIB!
+                                <br><br>
+
+                                Jangan berhenti!
+                                <br>
+                                Jangan menyerah!
+                                <br>
+                                Sampai peluit terakhir
+                                <br>
+                                FIB tetap membara!
+                                <br><br>
+
+                                GAS!
+                                <br>
+                                GAS!
+                                <br>
+                                GAS TERUS FIB!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section class="about-section" id="about">
+
+            <div class="about-container">
+
+                <div class="about-label">
+                    TENTANG SASTRO CONTHONG
+                </div>
+
+                <h2>
+                    BUKAN SEKADAR<br>
+                    <span>SUARA.</span>
+                </h2>
+
+                <p>
+                    Sastro Conthong adalah komunitas supporter
+                    Fakultas Ilmu Budaya yang menjadi bagian dari
+                    atmosfer pertandingan Porsenigama.
+                </p>
+
+                <p>
+                    Kami percaya bahwa tribun bukan hanya tempat
+                    menonton pertandingan, tetapi juga ruang untuk
+                    membangun solidaritas, kebersamaan, dan identitas
+                    FIB.
+                </p>
+
+                <div class="about-quote">
+                    "Satu tribun, satu suara, satu FIB."
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    SC
+                </div>
+
+                <div>
+                    <h3>
+                        SASTRO CONTHONG
+                    </h3>
+
+                    <p>
+                        Kontingen FIB Porsenigama
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <a
+                    href="https://youtube.com/"
+                    target="_blank"
+                >
+                    YouTube
+                </a>
+
+                <a
+                    href="https://x.com/"
+                    target="_blank"
+                >
+                    Twitter / X
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Sastro Conthong.
+                All rights reserved.
+            </p>
+
+            <p>
+                Fakultas Ilmu Budaya
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script>
+
+        function toggleLyrics(button) {
+
+            const lyrics = button.nextElementSibling;
+
+            const isOpen =
+                lyrics.classList.contains("show");
+
+
+            if (isOpen) {
+
+                lyrics.classList.remove("show");
+
+                button.querySelector("span:first-child")
+                    .textContent = "Buka Lirik";
+
+                button.querySelector(".arrow")
+                    .textContent = "+";
+
+            } else {
+
+                lyrics.classList.add("show");
+
+                button.querySelector("span:first-child")
+                    .textContent = "Tutup Lirik";
+
+                button.querySelector(".arrow")
+                    .textContent = "−";
+
+            }
+
+        }
+
+
+        /* =========================
+           STOP OTHER AUDIO
+        ========================== */
+
+        const audios =
+            document.querySelectorAll("audio");
+
+
+        audios.forEach(function(audio) {
+
+            audio.addEventListener("play", function() {
+
+                audios.forEach(function(otherAudio) {
+
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
